@@ -7,17 +7,19 @@ import Twister from './components/object/twister'
 import Ground from './components/object/ground'
 import Instance from './components/object/instance'
 import Jelly from './components/spline/jelly'
+import Floor from './components/object/floor'
 
 export default function Scene() {
 	const { idArray } = useStore()
 
 	return <>
-        {/* <Perf position="top-left" />
+        <Perf position="top-left" />
         <OrbitControls makeDefault />
         <directionalLight castShadow position={[1, 2, 3]} intensity={1.5} />
-        <ambientLight intensity={0.5} /> */}
+        <ambientLight intensity={0.5} />
         <Physics gravity={[0, -9.81, 0]}>
-            <Ground />
+            {/* <Ground /> */}
+            <Floor position={[0, -5, 0]} rotation={[-Math.PI / 2, 0, 0]} />
             { idArray.map(id => (
                 <Jelly key={id} uniqueId={id} />
             )) }
