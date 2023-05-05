@@ -6,9 +6,11 @@ export default function Overlay() {
 
     return (
 		<div className="fixed top-0 right-4">
-            <p className="text-3xl font-bold">count:{idArray.length}</p>
+            <p className="text-3xl font-bold text-white">count:{idArray.length}</p>
             <RedButton onClick={()=>{
-                add(uniqueId);
+                for (let i = 0; i < 100; i++) {
+                    add(Date.now() + i);
+                }
             }} >
                 {idArray.length <= 0 ? '整一个' : '再整一个'}
             </RedButton>

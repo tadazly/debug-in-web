@@ -1,8 +1,13 @@
 import { MeshReflectorMaterial } from '@react-three/drei'
+import { RigidBody } from '@react-three/rapier'
 
 export default function Floor(props: JSX.IntrinsicElements['mesh']) {
     return (
-      <mesh receiveShadow>
+      <RigidBody
+        type="fixed"
+        friction={0.7}
+    >
+      <mesh receiveShadow {...props}>
         <planeGeometry args={[100, 100]} />
         <MeshReflectorMaterial
           color="#878790"
@@ -17,6 +22,7 @@ export default function Floor(props: JSX.IntrinsicElements['mesh']) {
           mirror={1}
         />
       </mesh>
+    </RigidBody>
     )
   }
   
