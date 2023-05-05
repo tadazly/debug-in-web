@@ -1,7 +1,6 @@
 import { RigidBody } from '@react-three/rapier'
 import { useFrame } from '@react-three/fiber'
 import { useRef } from 'react'
-import * as THREE from 'three'
 import type { RapierRigidBody, RigidBodyProps } from '@react-three/rapier'
 
 export default function Twister(props: RigidBodyProps) {
