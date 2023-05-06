@@ -1,10 +1,8 @@
-import useSpline from '@splinetool/r3f-spline'
 import { RigidBody, CuboidCollider } from '@react-three/rapier';
-import useStore from '../../stores/useStore'
+import useStore from '../../../stores/useStore'
+import JellyMesh from '../../mesh/spline/jellyMesh'
 
 export default function Jelly({ ...props }) {
-    const { nodes, materials } = useSpline('https://prod.spline.design/Wpdu9TO6hUyvr9UG/scene.splinecode')
-
     const { del } = useStore()
 
     const destroy = () => {
@@ -24,11 +22,7 @@ export default function Jelly({ ...props }) {
             // onCollisionExit={collisionExit}
             {...props}
         >
-            <mesh 
-                scale={0.001}
-                geometry={nodes.jelly.geometry}
-                material={materials['jelly Material']}
-                castShadow
+            <JellyMesh 
                 onClick={destroy}
                 onPointerEnter={() => { document.body.style.cursor = 'pointer' }}
                 onPointerLeave={() => { document.body.style.cursor = 'default' }}

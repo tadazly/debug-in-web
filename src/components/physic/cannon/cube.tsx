@@ -1,8 +1,9 @@
 import { useBox } from '@react-three/cannon'
+import { Mesh } from 'three'
 
-export default function Cube(props: any) {
+export default function Cube(props: JSX.IntrinsicElements['mesh']) {
 
-    const [ref] = useBox(() => ({ mass: 1 }))
+    const [ref] = useBox<Mesh>(() => ({ mass: 1 }))
 
 	return <>
         <mesh
@@ -10,6 +11,7 @@ export default function Cube(props: any) {
             castShadow
             onPointerEnter={() => { document.body.style.cursor = 'pointer' }}
             onPointerLeave={() => { document.body.style.cursor = 'default' }}
+            {...props}
         >
             <boxGeometry />
             <meshStandardMaterial color="mediumpurple" />

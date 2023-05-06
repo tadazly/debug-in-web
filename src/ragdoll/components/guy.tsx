@@ -42,7 +42,7 @@ function Face() {
   )
 }
 
-export function Guy(props: any) {
+export function Guy(props) {
   return (
     <BodyPart name="upperBody" {...props}>
       <BodyPart {...props} name="head" config={joints['neckJoint']} render={<Face />} />

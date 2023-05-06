@@ -3,7 +3,7 @@ import { useRef, useMemo } from 'react'
 import type { InstancedRigidBodyProps } from '@react-three/rapier'
 
 export default function Instance() {
-	const cubesCount = 20
+	const cubesCount = 200
 	const cubes = useRef<THREE.InstancedMesh>(null)
 	const instances = useMemo(() => {
 		const instances: InstancedRigidBodyProps[] = [];
@@ -29,7 +29,7 @@ export default function Instance() {
         >
             <instancedMesh castShadow ref={cubes} args={[undefined, undefined, cubesCount]}>
                 <boxGeometry />
-                <meshStandardMaterial color="black" />
+                <meshStandardMaterial color="pink" />
             </instancedMesh>
         </InstancedRigidBodies>
 	</>
