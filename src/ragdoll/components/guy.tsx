@@ -5,7 +5,7 @@ import { createRagdoll } from '../helpers/createRagdoll'
 import { useDragConstraint } from '../helpers/Drag'
 import { Block } from '../helpers/Block'
 
-const { shapes, joints } = createRagdoll(5.5, Math.PI / 16, Math.PI / 16, 0)
+const { shapes, joints } = createRagdoll(5, Math.PI / 16, Math.PI / 16, 0)
 const context = createContext()
 
 const BodyPart = ({ config, children, render, name, ...props }) => {

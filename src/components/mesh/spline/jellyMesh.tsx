@@ -10,7 +10,7 @@ const JellyMesh = forwardRef<Mesh, MeshProps>((props, ref) => {
     const { nodes, materials } = useSpline('https://prod.spline.design/Wpdu9TO6hUyvr9UG/scene.splinecode')
 
     return (
-        <mesh
+        <instancedMesh
             ref={ref}
             scale={0.001}
             geometry={nodes.jelly.geometry}
