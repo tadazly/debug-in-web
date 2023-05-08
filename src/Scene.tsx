@@ -20,7 +20,6 @@ export default function Scene() {
         <ambientLight intensity={0.2} />
         <pointLight position={[-20, -5, -20]} color="red" />
         <Physics gravity={[0, -9.8, 0]}>
-            {/* <Ground /> */}
             <Floor position={[0, -5, 0]} rotation={[-Math.PI / 2, 0, 0]} />
 
             <RagdollScene />

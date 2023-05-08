@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import RedButton from './components/ui/redButton'
 import useStore from './stores/useStore'
+import { useControls } from 'leva'
 
 export default function Overlay() {
     const {idArray, add} = useStore()
