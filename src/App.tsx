@@ -7,7 +7,8 @@ export default function App() {
 	return <>
 		<Canvas
 			shadows
-			camera={{ position: [-40, 40, 40], fov: 25, near: 1, far: 100 }}
+			dpr={[1,2]}
+			camera={{ position: [-36, 36, 36], fov: 25, near: 1, far: 100 }}
 		>	
 			<Scene />
 		</Canvas>
