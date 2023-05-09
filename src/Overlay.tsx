@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react'
 import RedButton from './components/ui/redButton'
 import useStore from './stores/useStore'
 
