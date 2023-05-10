@@ -1,7 +1,7 @@
 import { createRef, useCallback, useEffect } from 'react'
 import { useFrame } from '@react-three/fiber'
 import { usePointToPointConstraint, useSphere } from '@react-three/cannon'
-import useStore from '../../stores/useStore'
+import useStore from '../../../stores/useStore'
 
 const cursor = createRef()
 

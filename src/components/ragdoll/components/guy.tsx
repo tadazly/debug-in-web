@@ -1,6 +1,6 @@
 import { createContext, useContext, useRef } from 'react'
 import { useFrame } from '@react-three/fiber'
-import useStore from '../../stores/useStore'
+import useStore from '../../../stores/useStore'
 import { useBox, useConeTwistConstraint } from '@react-three/cannon'
 import { createRagdoll } from '../helpers/createRagdoll'
 import { useDragConstraint } from '../helpers/drag'

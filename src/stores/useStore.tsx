@@ -19,6 +19,7 @@ const useStore = create<StoreType>((set) => ({
         for (let i = state.uniqueId; i < final; i++) {
             state.idArray.push(i)
         }
+        console.log(`Jelly Count: ${final} !`)
         return {idArray: state.idArray, uniqueId: final}
     }),
     del: (id) => set((state) => {

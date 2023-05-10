@@ -1,17 +1,17 @@
-import { Suspense, useState } from 'react'
+import { Suspense } from 'react'
 import { OrbitControls } from '@react-three/drei'
 import { Perf } from 'r3f-perf'
 import { Physics, Debug } from '@react-three/cannon'
 import useStore from './stores/useStore'
 import Floor from './components/physic/cannon/floor'
 import Jelly from './components/physic/cannon/jelly'
-import RagdollScene from './ragdoll/ragdollScene'
+import RagdollScene from './components/ragdoll/ragdollScene'
 import { useControls, button } from 'leva'
 
 export default function Scene() {
     const { idArray, enableOrbitControls, add } = useStore()
     const { gravity } = useControls({
-        gravity: {value: [0, -9.8], step: 1}
+        gravity: {value: [0, -9.8], step: 1, joystick: "invertY"}
     })
     const { jellyScale } = useControls("Jelly",{
         jellyScale: {value: 2, min: 0.1, max: 10, step: 0.1},
