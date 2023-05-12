@@ -11,8 +11,10 @@
   },
   "dependencies": {
     "@react-three/cannon": "^6.5.2",
+    "@react-three/csg": "^2.2.0",
     "@react-three/drei": "^9.66.1",
     "@react-three/fiber": "^8.13.0",
+    "@react-three/postprocessing": "2.7.0",
     "@react-three/rapier": "^0.15.1",
     "@splinetool/loader": "^0.9.324",
     "@splinetool/r3f-spline": "^1.0.2",
