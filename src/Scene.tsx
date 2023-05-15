@@ -10,7 +10,7 @@ export default function Scene() {
     const { enableOrbitControls } = useStore()
     const { gravity, autoRotate, physicDebug, enablePerf } = useControls({
         gravity: { value: [0, -9.8], step: 1, joystick: "invertY" },
-        autoRotate: { value: false },
+        autoRotate: { value: true },
         physicDebug: { value: false },
         enablePerf: { value: false }
     })
