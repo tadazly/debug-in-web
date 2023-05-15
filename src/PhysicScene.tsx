@@ -5,6 +5,7 @@ import CrystallBall from './components/mesh/crystalBall'
 import Jelly from './components/physic/cannon/jelly'
 import useStore from './stores/useStore'
 import { useControls, button } from 'leva'
+import Computer from './components/physic/cannon/computer'
 
 export default function PhysicScene() {
     const { idArray, add } = useStore()
@@ -27,5 +28,6 @@ export default function PhysicScene() {
             )}
         </Suspense>
         <CrystallBall position={[8,4,0]}/>
+        <Computer position={[8,2,2]}/>
     </>
 }

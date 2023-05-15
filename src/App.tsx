@@ -1,6 +1,7 @@
 import { Canvas } from '@react-three/fiber'
 import Scene from './Scene'
 import Overlay from './Overlay'
+import TestScene from './TestScene'
 
 export default function App() {
 	return <>
