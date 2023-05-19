@@ -13,7 +13,15 @@ const context = createContext()
 const BodyPart = ({ config, children, render, name, ...props }) => {
 	const { color, args, mass, position } = shapes[name]
 	const parent = useContext(context)
-	const [ref] = useBox(() => ({ mass, args, position, linearDamping: 0.99, ...props }))
+	const [ref] = useBox(() => ({ mass, args, position, linearDamping: 0.99, ...props, onCollideBegin(e) {
+		if (e.body.name === 'jelly') {
+			if (e.target.name === 'head') {
+				console.error("爆头，得分 +10086")
+			} else {
+				console.warn(`击中${e.target.name}，得分 +1`)
+			}
+		}
+	}, }))
 	useConeTwistConstraint(ref, parent, config)
 	const bind = useDragConstraint(ref)
 	return (

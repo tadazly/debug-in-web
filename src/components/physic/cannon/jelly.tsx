@@ -27,6 +27,7 @@ export default function Jelly({ ...props }) {
 
     return (
         <JellyMesh
+            name="jelly"
             ref={ref}
             {...props}
             scale={scale * 0.001}
