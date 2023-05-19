@@ -22,7 +22,8 @@ export default function Computer({...props}) {
             />
             <primitive object={computer.scene} position-y={-1.2} >
                 <Html
-                    occlude="blending"
+                    occlude
+                    // occlude="blending"
                     transform
                     wrapperClass="htmlScreen"
                     distanceFactor={4.17}
